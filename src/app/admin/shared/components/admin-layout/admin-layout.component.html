@@ -1,0 +1,19 @@
+<nav class="navbar bg-primary">
+  <h1>
+    <a routerLink="/">Angular Admin</a>
+  </h1>
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'dashboard']">Головна</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'create']">Створити</a>
+    </li>
+    <li>
+      <a href="#" (click)="logout($event)">Вийти</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
