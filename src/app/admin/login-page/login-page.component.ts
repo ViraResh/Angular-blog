@@ -25,6 +25,8 @@ export class LoginPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['loginAgain']) {
         this.message = 'Будь ласка введіть дані!';
+      } else if (params['authFailed']) {
+        this.message = 'Сесія закінчилась. Введіть дані наново.';
       }
     });
     this.form = new FormGroup({
